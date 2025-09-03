@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake Chaos House</title>
+  <meta name="description" content="Snake Chaos House — we are what you can't simply do. Dark tech club with workshops, events, and membership.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oxanium:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="effects.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Matrix rain background -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+<span class="snake-logo" aria-hidden="true">
+  <img src="Team_Logo1.0_R_Main_sticker.png" alt="Snake Chaos House Logo"></span>   
+       <span class="brand-text">Snake <strong>Chaos</strong> House</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="navMenu" class="menu" role="navigation">
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#shop">Shop</a>
+        <a href="#membership">Membership</a>
+        <a href="#events">Events</a>
+      </nav>
+    </div>
+    <div class="nav-underline"></div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section" id="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="glitch hero-title" data-text="We are what you can't simply do">we are what you can't simply do</h1>
+          <p class="tagline">Dark tech club • hackers vibe • neon green energy</p>
+          <div class="cta">
+            <a href="#membership" class="btn primary">Join the House</a>
+            <a href="#workshops" class="btn outline">See Workshops</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- Snake SVG with subtle motion -->
+          <svg class="snake-svg" viewBox="0 0 800 400" role="img" aria-label="Snake line animation">
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#39ff14"/>
+                <stop offset="100%" stop-color="#00ffa6"/>
+              </linearGradient>
+            </defs>
+            <path id="snakePath"
+              d="M20,200 C120,60 220,340 320,200 C420,60 520,340 620,200 C700,120 760,160 780,160"
+              fill="none" stroke="url(#neon)" stroke-width="4" filter="url(#glow)" />
+            <circle id="snakeHead" r="7" fill="#e6ffe6">
+              <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#snakePath"/>
+              </animateMotion>
+            </circle>
+          </svg>
+        </div>
+      </div>
+      <div class="scanline" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-label="About us">
+      <div class="container grid-2">
+        <div class="terminal card reveal">
+          <div class="term-head">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="term-title">about.sh</span>
+          </div>
+          <div class="term-body">
+            <pre class="type terminal-text" data-lines='[
+"We are Snake Chaos House.", 
+"Tech-first. Dark-mode by default.",
+"Workshops. Events. Hands-on learning.",
+"Break limits. Build skills."]'></pre>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+
+    <!-- TRACKS -->
+    <section class="section" id="tracks" aria-label="Tracks">
+      <div class="container">
+        <h2 class="center section-title">Tracks</h2>
+        <div class="cards tracks">
+          <article class="card track reveal">
+            <h3 class="track-title">Dev</h3>
+            <ul>
+              <li class="track-item">Web & tooling</li>
+              <li class="track-item">Clean code & Git</li>
+              <li class="track-item">Ship fast</li>
+            </ul>
+          </article>
+          <article class="card track reveal">
+            <h3 class="track-title">Cyber</h3>
+            <ul>
+              <li class="track-item">CTF & Red/Blue</li>
+              <li class="track-item">Network & OSINT</li>
+              <li class="track-item">Defense mindset</li>
+            </ul>
+          </article>
+          <article class="card track reveal">
+            <h3 class="track-title">Robotics</h3>
+            <ul>
+              <li class="track-item">Embedded & IoT</li>
+              <li class="track-item">Sensors & control</li>
+              <li class="track-item">Field demos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS -->
+ <section class="section" id="workshops" aria-label="Workshops">
+  <div class="container">
+
+    <!-- Glitch Title -->
+    <h2 class="center glitch section-title" data-text="Workshops">
+      Workshops
+    </h2>
+    <p class="center muted reveal">We update this list frequently. Each item links to its Google Form.</p>
+    
+    <div id="workshopList" class="timeline">
+      <!-- Cyber Workshop -->
+      <div class="entry reveal" style="transition-delay: .1s;">
+        <h3 class="workshop-title">Cyber Security Workshop</h3>
+        <p class="muted workshop-description">Learn about ethical hacking, penetration testing, and defense strategies.</p>
+        <a href="https://forms.gle/your-cyber-link" target="_blank" class="btn outline">Join</a>
+      </div>
+
+      <!-- AI Workshop -->
+      <div class="entry reveal" style="transition-delay: .3s;">
+        <h3 class="workshop-title">Artificial Intelligence Workshop</h3>
+        <p class="muted workshop-description">Dive into machine learning, neural networks, and AI applications.</p>
+        <a href="https://forms.gle/your-ai-link" target="_blank" class="btn outline">Join</a>
+      </div>
+
+      <!-- Robotics Workshop -->
+      <div class="entry reveal" style="transition-delay: .5s;">
+        <h3 class="workshop-title">Robotics Workshop</h3>
+        <p class="muted workshop-description">Hands-on experience with robots, sensors, and automation.</p>
+        <a href="https://forms.gle/your-robot-link" target="_blank" class="btn outline">Join</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- /////////////////////////////////////////////////////SHOP 
+    <section class="section" id="shop" aria-label="Shop">
+      <div class="container">
+        <h2 class="center">Shop</h2>
+        <div class="cards shop">
+          <article class="card product reveal">
+            <div class="product-img placeholder"></div>
+            <h3>Sticker Pack</h3>
+            <p>Neon snake & terminal vibes. <span class="tag">Coming soon</span></p>
+          </article>
+          <article class="card product reveal">
+            <div class="product-img placeholder"></div>
+            <h3>Black Tee</h3>
+            <p>Minimal logo, heavy cotton. <span class="tag">Coming soon</span></p>
+          </article>
+          <article class="card product reveal">
+            <div class="product-img placeholder"></div>
+            <h3>Hoodie</h3>
+            <p>Dark, warm, and mean. <span class="tag">Coming soon</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    ////////////////////////////////////////////////////////////////////MEMBERSHIP 
+    <section class="section" id="membership" aria-label="Membership">
+      <div class="container">
+        <h2 class="center">Membership</h2>
+        <div class="cards membership">
+          <article class="card tier reveal">
+            <h3>Member</h3>
+            <ul>
+              <li>Access to workshops</li>
+              <li>Community chat</li>
+              <li>Event priority</li>
+            </ul>
+            <a href="#" class="btn primary">Join</a>
+          </article>
+          <article class="card tier reveal">
+            <h3>Builder</h3>
+            <ul>
+              <li>All Member perks</li>
+              <li>Early workshop seats</li>
+              <li>Private builds channel</li>
+            </ul>
+            <a href="#" class="btn outline">Join</a>
+          </article>
+          <article class="card tier reveal">
+            <h3>Operator</h3>
+            <ul>
+              <li>All Builder perks</li>
+              <li>Host a workshop</li>
+              <li>Exclusive drops</li>
+            </ul>
+            <a href="#" class="btn outline">Join</a>
+          </article>
+        </div>
+        <p class="center muted">Replace the <strong>Join</strong> buttons with your Google Form links.</p>
+      </div>
+    </section>
+
+    //////////////////////////////////////////////////////////////EVENTS --
+    <section class="section" id="events" aria-label="Events">
+      <div class="container">
+        <h2 class="center">Events</h2>
+        <div class="cards events">
+          <article class="card event reveal">
+            <h3>Orientation Day</h3>
+            <p>Meet the club, see the plan, and catch the vibe.</p>
+            <p class="muted">Date: TBD • Location: Campus Hall A</p>
+          </article>
+          <article class="card event reveal">
+            <h3>Cyber Workshop</h3>
+            <p>Intro to ethical hacking, CTF warm-ups, and tooling.</p>
+            <p class="muted">Date: TBD • Location: Lab 1</p>
+          </article>
+          <article class="card event reveal">
+            <h3>AI Workshop</h3>
+            <p>Hands-on with practical ML & small-model tricks.</p>
+            <p class="muted">Date: TBD • Location: Lab 2</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+-->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Snake Chaos House • <span class="mono">console.log('See you in the dark')</span></p>
+      <div style="width: 100%; height: 10px;"></div>
+            <p><span class="mono">console.log('GHANDOUR//:o')</span></p>
+
+      <div class="socials">
+        <!-- Add your links -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="matrix.js"></script>
+  <script src="reveal.js"></script>
+  <script src="typewriter.js"></script>
+  <script src="workshops.js"></script>
+  <script src="main.js"></script>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 80;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("visible");
+      } else {
+        reveals[i].classList.remove("visible");
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
