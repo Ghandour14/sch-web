@@ -346,4 +346,12 @@
   90% { clip-path: inset(5% 0 15% 0); }
   100% { clip-path: inset(0 0 0 0); }
 }
-
+.vc-week,
+.vc-week__day {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
