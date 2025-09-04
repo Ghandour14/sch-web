@@ -162,15 +162,6 @@ class HackerCalendar {
             </div>
             <div class="vc-wrapper">
               <div class="vc-content">
-                <div class="vc-week">
-                  <div class="vc-week__day">Mon</div>
-                  <div class="vc-week__day">Tue</div>
-                  <div class="vc-week__day">Wed</div>
-                  <div class="vc-week__day">Thu</div>
-                  <div class="vc-week__day">Fri</div>
-                  <div class="vc-week__day">Sat</div>
-                  <div class="vc-week__day">Sun</div>
-                </div>
                 <div class="vc-dates" id="vc-dates">
                   <!-- Dates will be populated here -->
                 </div>
