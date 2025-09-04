@@ -134,26 +134,6 @@
   box-shadow: 0 0 10px rgba(57,255,20,.5);
 }
 
-/* Week Days Header */
-.vc-week {
-  background: rgba(57,255,20,.15);
-  border-bottom: 1px solid var(--vc-color-primary);
-}
-
-.vc-week__day {
-  padding: 1rem 0.5rem;
-  text-align: center;
-  font-weight: bold;
-  color: var(--vc-color-primary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-  border-right: 1px solid rgba(57,255,20,.2);
-}
-
-.vc-week__day:last-child {
-  border-right: none;
-}
 
 /* Dates Grid */
 .vc-dates {
