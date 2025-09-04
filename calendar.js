@@ -149,25 +149,26 @@ class HackerCalendar {
       // Custom date classes
       DOMTemplates: {
         default: `
-          <div class="vc-container">
-            <div class="vc-header">
-              <div class="vc-controls">
-                <button type="button" class="vc-arrow vc-arrow_prev" aria-label="Previous month">‹</button>
-                <div class="vc-header__content">
-                  <button type="button" class="vc-month">{{month}}</button>
-                  <button type="button" class="vc-year">{{year}}</button>
-                </div>
-                <button type="button" class="vc-arrow vc-arrow_next" aria-label="Next month">›</button>
-              </div>
-            </div>
-            <div class="vc-wrapper">
-              <div class="vc-content">
-                <div class="vc-dates" id="vc-dates">
-                  <!-- Dates will be populated here -->
-                </div>
-              </div>
-            </div>
+         <div class="vc-container">
+      <div class="vc-header">
+        <div class="vc-controls">
+          <button type="button" class="vc-arrow vc-arrow_prev" aria-label="Previous month">‹</button>
+          <div class="vc-header__content">
+            <button type="button" class="vc-month">{{month}}</button>
+            <button type="button" class="vc-year">{{year}}</button>
           </div>
+          <button type="button" class="vc-arrow vc-arrow_next" aria-label="Next month">›</button>
+        </div>
+      </div>
+      <div class="vc-wrapper">
+        <div class="vc-content">
+          <!-- Removed weekdays row -->
+          <div class="vc-dates" id="vc-dates">
+            <!-- Dates will be populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
         `,
       },
     });
